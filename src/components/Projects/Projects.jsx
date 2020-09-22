@@ -5,6 +5,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import FOTO1 from "./foto3.jpg";
+import FOTO2 from "./foto4.jpg";
+import FOTO3 from "./foto5.jpg";
 
 const Projects = () => {
 
@@ -53,13 +56,14 @@ const Projects = () => {
       setIsDesktop(false);
     }
   }, []);
-
+  const fotos = [FOTO1, FOTO2, FOTO3];
   return (
     <section id="projects">
       <Container>
         <div className="project-wrapper">
           <Title title="Proyectos" />
           {projects.map((project) => {
+            const i = 0;
             const { title, info, info2, url, repo, img, id } = project;
 
             return (
